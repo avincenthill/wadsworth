@@ -1,6 +1,8 @@
 {
-  "name": "Webhook-echo-sample",
-  "description": "Webhook echo sample",
+  "name": "wadsworth",
+  "description": "A virtual assistant",
   "repository": "https://github.com/SunilSyal/Webhook-and-API.AI-Samples.git",
   "keywords": ["api.ai", "dialogflow", "natural language"]
+
+  //TBD edit repo link
 }
