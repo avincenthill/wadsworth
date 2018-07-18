@@ -12,6 +12,7 @@ restService.use(
 
 restService.use(bodyParser.json());
 
+//Update this POST request to serve Dialogflow V2 API form to Dialogflow
 restService.post("/echo", function(req, res) {
   var speech =
     req.body.result &&
@@ -20,7 +21,7 @@ restService.post("/echo", function(req, res) {
       ? req.body.result.parameters.echoText
       : "There was a problem with your 'speech' data, please try again.";
   return res.json({
-    speech: speech,
+    fulfillmentText: speech,
     displayText: speech,
     source: "wadsworth"
   });
