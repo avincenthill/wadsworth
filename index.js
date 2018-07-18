@@ -16,9 +16,9 @@ restService.use(bodyParser.json());
 restService.post("/echo", function(req, res) {
   var speech =
     req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.echoText
+      ? req.body.queryResult.parameters.echoText
       : "There was a problem with your 'speech' data, please try again.";
   return res.json({
     speech: speech,
