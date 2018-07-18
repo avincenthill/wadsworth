@@ -18,7 +18,7 @@ restService.post("/echo", function(req, res) {
     req.body.result.parameters &&
     req.body.result.parameters.echoText
       ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
+      : "There was a problem with your 'speech' data, please try again.";
   return res.json({
     speech: speech,
     displayText: speech,
