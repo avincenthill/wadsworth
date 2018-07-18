@@ -3,16 +3,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const restService = express();
-
 restService.use(
   bodyParser.urlencoded({
     extended: true
   })
 );
-
 restService.use(bodyParser.json());
 
-//Update this POST request to serve Dialogflow V2 API form to Dialogflow
 restService.post("/echo", function(req, res) {
   var speech =
     req.body.queryResult &&
@@ -22,8 +19,6 @@ restService.post("/echo", function(req, res) {
       : "There was a problem with your 'speech' data, please try again.";
   return res.json({
     fulfillmentText: speech,
-    speech: speech,
-    displayText: speech,
     source: "wadsworth"
   });
 });
