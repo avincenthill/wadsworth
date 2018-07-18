@@ -15,7 +15,7 @@ restService.use(bodyParser.json());
 //Update this POST request to serve Dialogflow V2 API form to Dialogflow
 restService.post("/echo", function(req, res) {
   var speech =
-    req.body.result &&
+    req.body.queryResult &&
     req.body.queryResult.parameters &&
     req.body.queryResult.parameters.echoText
       ? req.body.queryResult.parameters.echoText
