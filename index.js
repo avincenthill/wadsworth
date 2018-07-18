@@ -21,6 +21,7 @@ restService.post("/echo", function(req, res) {
       ? req.body.queryResult.parameters.echoText
       : "There was a problem with your 'speech' data, please try again.";
   return res.json({
+    fulfillmentText: speech,
     speech: speech,
     displayText: speech,
     source: "wadsworth"
