@@ -1,8 +1,6 @@
 {
   "name": "wadsworth",
   "description": "A virtual assistant",
-  "repository": "https://github.com/SunilSyal/Webhook-and-API.AI-Samples.git",
+  "repository": "https://github.com/avincenthill/wadsworth",
   "keywords": ["api.ai", "dialogflow", "natural language"]
-
-  //TBD edit repo link
 }
