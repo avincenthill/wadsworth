@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const restService = express();
+var piglatin = require("pig-latin");
 restService.use(
   bodyParser.urlencoded({
     extended: true
@@ -18,7 +19,7 @@ restService.post("/echo", function(req, res) {
       ? req.body.queryResult.parameters.echoText
       : "There was a problem with your 'speech' data, please try again.";
   return res.json({
-    fulfillmentText: speech,
+    fulfillmentText: piglatin(speech),
     source: "wadsworth"
   });
 });

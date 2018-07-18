@@ -9,6 +9,7 @@
   "author": "Alex Vincent-Hill",
   "dependencies": {
     "body-parser": "^1.15.0",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "pig-latin": "^2.0.2"
   }
 }
